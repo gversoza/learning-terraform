@@ -45,7 +45,7 @@ module "blog_autoscaling" {
   traffic_source_attachments = {
     alb_target_group = {
       type = "elb"
-      traffic_source_identifier = module.blog_alb.target_groups.ex-instance.arn
+      traffic_source_identifier = module.blog_alb.target_groups.blog-.arn
     }
   }
 }
