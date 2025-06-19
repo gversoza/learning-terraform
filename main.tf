@@ -45,6 +45,9 @@ module "blog_autoscaling" {
   security_groups     = [module.blog_sg.security_group_id]
   instance_type       = var.instance_type
   image_id            = data.aws_ami.app_ami.id
+  
+  elastic_gpu_specifications    = {}
+  elastic_inference_accelerator = {}
 }
 
 module "blog_alb" {
